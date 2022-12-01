@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8n-GC-8rB">
+                                <rect key="frame" x="59" y="200" width="275" height="63.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-e8-LbO">
+                                <rect key="frame" x="79" y="559" width="235" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                    <backgroundConfiguration key="background" cornerRadius="15"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="countPlusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9K-vK-8Nh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDn-WO-o1I">
+                                <rect key="frame" x="79" y="688" width="235" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="clear" catalog="system" title="CLEAR"/>
+                                <connections>
+                                    <action selector="resetOfSum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsu-4Y-nOl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B24-Ep-lxM">
+                                <rect key="frame" x="79" y="645" width="235" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="2"/>
+                                <connections>
+                                    <action selector="equalsTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEx-Vu-gei"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-p5-mZh">
+                                <rect key="frame" x="79" y="602" width="235" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="10">
+                                    <backgroundConfiguration key="background" cornerRadius="15"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="countPlusTen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SnP-ja-GtJ"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x9U-u0-bp9">
+                                <rect key="frame" x="172" y="520" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tgA-p5-mZh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="0Sy-rW-n0m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t8n-GC-8rB" secondAttribute="bottom" constant="554.66666666666674" id="4fF-Jv-TRr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tgA-p5-mZh" secondAttribute="trailing" constant="79" id="6qJ-Vx-riZ"/>
+                            <constraint firstItem="ceo-e8-LbO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="500" id="Hdl-Nv-Ud6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ceo-e8-LbO" secondAttribute="trailing" constant="79" id="Jz5-Sp-9az"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lDn-WO-o1I" secondAttribute="trailing" constant="79" id="M8B-xm-Erm"/>
+                            <constraint firstItem="B24-Ep-lxM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="OVv-Vg-rFV"/>
+                            <constraint firstItem="ceo-e8-LbO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="S0p-kZ-H3Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t8n-GC-8rB" secondAttribute="trailing" constant="59" id="Syn-GE-ek6"/>
+                            <constraint firstAttribute="trailing" secondItem="B24-Ep-lxM" secondAttribute="trailing" constant="79" id="Tc8-4T-B8q"/>
+                            <constraint firstItem="ceo-e8-LbO" firstAttribute="top" secondItem="x9U-u0-bp9" secondAttribute="bottom" constant="8" id="cRR-9m-g5r"/>
+                            <constraint firstItem="tgA-p5-mZh" firstAttribute="top" secondItem="ceo-e8-LbO" secondAttribute="bottom" constant="8" id="eiF-oz-qKl"/>
+                            <constraint firstItem="x9U-u0-bp9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j99-rf-86S"/>
+                            <constraint firstItem="B24-Ep-lxM" firstAttribute="top" secondItem="tgA-p5-mZh" secondAttribute="bottom" constant="8" id="kqg-bT-zdV"/>
+                            <constraint firstItem="lDn-WO-o1I" firstAttribute="top" secondItem="B24-Ep-lxM" secondAttribute="bottom" constant="8" id="l9g-wd-j5f"/>
+                            <constraint firstItem="t8n-GC-8rB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="n3B-Ep-ScB"/>
+                            <constraint firstItem="lDn-WO-o1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="nkP-E3-IYn"/>
+                            <constraint firstItem="x9U-u0-bp9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="461" id="ubO-B6-vw4"/>
+                            <constraint firstItem="t8n-GC-8rB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="yiC-js-pPK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterButton" destination="ceo-e8-LbO" id="8dX-Ma-DQr"/>
+                        <outlet property="counterButtonPlusTen" destination="tgA-p5-mZh" id="61K-BC-O83"/>
+                        <outlet property="equalsTwo" destination="B24-Ep-lxM" id="vMr-Y3-6VM"/>
+                        <outlet property="resetOfSum" destination="lDn-WO-o1I" id="hMU-Ll-ebW"/>
+                        <outlet property="sumOfCountLabel" destination="t8n-GC-8rB" id="xvZ-YJ-F46"/>
+                        <outlet property="switchMinusOrPlus" destination="x9U-u0-bp9" id="VeR-ic-3Uj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
